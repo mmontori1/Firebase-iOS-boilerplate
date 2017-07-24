@@ -20,6 +20,18 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "createUser" {
+                print("To Create User Screen!")
+            }
+        }
+    }
+    
+    @IBAction func unwindToLogin(_ segue: UIStoryboardSegue) {
+        print("Returned to Login Screen!")
+    }
+    
     @IBAction func loginClicked(_ sender: UIButton) {
         guard let email = emailTextField.text,
             let password = passwordTextField.text else{

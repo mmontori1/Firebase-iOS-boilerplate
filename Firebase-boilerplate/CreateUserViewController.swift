@@ -24,6 +24,14 @@ class CreateUserViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "cancel" {
+                print("Back to Login screen!")
+            }
+        }
+    }
+    
     @IBAction func signUpClicked(_ sender: UIButton) {
         guard let firstName = firstNameTextField.text,
             let lastName = lastNameTextField.text,
