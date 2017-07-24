@@ -42,6 +42,10 @@ class CreateUserViewController: UIViewController {
                 }
                 
                 User.setCurrent(user, writeToUserDefaults: true)
+                
+                let initialViewController = UIStoryboard.initialViewController(for: .main)
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
             }
         }
         

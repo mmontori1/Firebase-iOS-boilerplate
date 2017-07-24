@@ -38,9 +38,13 @@ class LoginViewController: UIViewController {
             UserService.show(forUID: user.uid) { (user) in
                 if let user = user {
                     User.setCurrent(user, writeToUserDefaults: true)
+                    let initialViewController = UIStoryboard.initialViewController(for: .main)
+                    self.view.window?.rootViewController = initialViewController
+                    self.view.window?.makeKeyAndVisible()
                 }
                 else {
                     print("no user exists!")
+                    return
                 }
             }
         }
