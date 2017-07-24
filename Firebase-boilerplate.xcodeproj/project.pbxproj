@@ -19,6 +19,7 @@
 		01C258181F2687DF00A49D8E /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C258171F2687DF00A49D8E /* Storyboard+Utility.swift */; };
 		01C2581A1F268D1400A49D8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01C258191F268D1400A49D8E /* GoogleService-Info.plist */; };
 		01C2581C1F26943F00A49D8E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2581B1F26943F00A49D8E /* MainViewController.swift */; };
+		01C2581E1F26A87F00A49D8E /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2581D1F26A87F00A49D8E /* AuthService.swift */; };
 		638B1B9C64BA0B24712CC864 /* Pods_Firebase_boilerplate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFFF030059A1B4C5405B177 /* Pods_Firebase_boilerplate.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		01C258171F2687DF00A49D8E /* Storyboard+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		01C258191F268D1400A49D8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		01C2581B1F26943F00A49D8E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		01C2581D1F26A87F00A49D8E /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		6EFFF030059A1B4C5405B177 /* Pods_Firebase_boilerplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebase_boilerplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9869B49445BB993CCB1F2CE3 /* Pods-Firebase-boilerplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase-boilerplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Firebase-boilerplate/Pods-Firebase-boilerplate.debug.xcconfig"; sourceTree = "<group>"; };
 		E155DC62020A795516E32E4A /* Pods-Firebase-boilerplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase-boilerplate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Firebase-boilerplate/Pods-Firebase-boilerplate.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		01C257F91F264D0A00A49D8E /* Firebase-boilerplate */ = {
 			isa = PBXGroup;
 			children = (
+				01C2581D1F26A87F00A49D8E /* AuthService.swift */,
 				01C258191F268D1400A49D8E /* GoogleService-Info.plist */,
 				01C258171F2687DF00A49D8E /* Storyboard+Utility.swift */,
 				01C258101F2670B000A49D8E /* LoginViewController.swift */,
@@ -242,6 +245,7 @@
 				01C258181F2687DF00A49D8E /* Storyboard+Utility.swift in Sources */,
 				01C257FB1F264D0A00A49D8E /* AppDelegate.swift in Sources */,
 				01C2580D1F2663C100A49D8E /* User.swift in Sources */,
+				01C2581E1F26A87F00A49D8E /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

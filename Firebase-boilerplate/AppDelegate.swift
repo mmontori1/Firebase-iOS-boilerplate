@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
 
 typealias FIRUser = FirebaseAuth.User
 
@@ -24,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
-
 
 extension AppDelegate {
     func configureInitialRootViewController(for window: UIWindow?) {

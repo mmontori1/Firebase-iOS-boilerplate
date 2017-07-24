@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseDatabase
 
 class LoginViewController: UIViewController {
     
@@ -27,13 +25,11 @@ class LoginViewController: UIViewController {
             let password = passwordTextField.text else{
             return
         }
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            if let error = error {
-                print("\(error.localizedDescription)")
+        AuthService.signIn(email: email, password: password) { (user) in
+            guard let user = user else {
+                print("error: FIRUser does not exist!")
                 return
             }
-            guard let user = user
-                else { return }
             
             UserService.show(forUID: user.uid) { (user) in
                 if let user = user {
@@ -43,7 +39,7 @@ class LoginViewController: UIViewController {
                     self.view.window?.makeKeyAndVisible()
                 }
                 else {
-                    print("no user exists!")
+                    print("error: User does not exist!")
                     return
                 }
             }

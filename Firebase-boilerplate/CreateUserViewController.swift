@@ -23,24 +23,25 @@ class CreateUserViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     @IBAction func signUpClicked(_ sender: UIButton) {
-        guard let email = emailTextField.text,
-            let password = passwordTextField.text else{
-                return
-        }
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            if let error = error {
-                print("\(error.localizedDescription)")
+        guard let firstName = firstNameTextField.text,
+            let lastName = lastNameTextField.text,
+            let username = usernameTextField.text,
+            let email = emailTextField.text,
+            let password = passwordTextField.text,
+            !username.isEmpty,
+            !firstName.isEmpty,
+            !lastName.isEmpty
+            else {
+                print("Required fields are not all filled!")
                 return
             }
-            guard let firUser = Auth.auth().currentUser,
-                let username = self.usernameTextField.text,
-                let firstName = self.firstNameTextField.text,
-                let lastName = self.lastNameTextField.text,
-                !username.isEmpty,
-                !firstName.isEmpty,
-                !lastName.isEmpty
-                    else { return }
+        
+        AuthService.createUser(email: email, password: password) { (authUser) in
+            guard let firUser = authUser else {
+                return
+            }
             
             UserService.create(firUser, username: username, firstName: firstName, lastName: lastName) { (user) in
                 guard let user = user else {
@@ -54,6 +55,5 @@ class CreateUserViewController: UIViewController {
                 self.view.window?.makeKeyAndVisible()
             }
         }
-        
     }
 }

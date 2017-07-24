@@ -1,6 +1,5 @@
 //
 //  Storyboard+Utility.swift
-//  GetCats
 //
 //  Created by Mariano Montori on 7/18/17.
 //  Copyright © 2017 Mariano Montori. All rights reserved.
