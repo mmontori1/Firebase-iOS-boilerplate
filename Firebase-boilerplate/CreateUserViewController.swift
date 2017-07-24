@@ -11,7 +11,8 @@ import FirebaseAuth
 
 class CreateUserViewController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -34,9 +35,14 @@ class CreateUserViewController: UIViewController {
             }
             guard let firUser = Auth.auth().currentUser,
                 let username = self.usernameTextField.text,
-                !username.isEmpty else { return }
+                let firstName = self.firstNameTextField.text,
+                let lastName = self.lastNameTextField.text,
+                !username.isEmpty,
+                !firstName.isEmpty,
+                !lastName.isEmpty
+                    else { return }
             
-            UserService.create(firUser, username: username) { (user) in
+            UserService.create(firUser, username: username, firstName: firstName, lastName: lastName) { (user) in
                 guard let user = user else {
                     return
                 }

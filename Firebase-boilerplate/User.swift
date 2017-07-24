@@ -13,17 +13,20 @@ class User : NSObject {
     
     //User variables
     let uid : String
-    let name : String
+    let firstName : String
+    let lastName : String
     let username : String
     var dictValue: [String : Any] {
-        return ["name" : name,
+        return ["firstName" : firstName,
+                "lastName" : lastName,
                 "username" : username]
     }
     
     //Standard User init()
-    init(uid: String, username: String, name: String) {
+    init(uid: String, username: String, firstName: String, lastName: String) {
         self.uid = uid
-        self.name = name
+        self.firstName = firstName
+        self.lastName = lastName
         self.username = username
         super.init()
     }
@@ -31,23 +34,27 @@ class User : NSObject {
     //User init using Firebase snapshots
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot.value as? [String : Any],
-            let name = dict["name"] as? String,
+            let firstName = dict["firstName"] as? String,
+            let lastName = dict["lastName"] as? String,
             let username = dict["username"] as? String
             else { return nil }
         self.uid = snapshot.key
-        self.name = name
+        self.firstName = firstName
+        self.lastName = lastName
         self.username = username
     }
     
     //UserDefaults
     required init?(coder aDecoder: NSCoder) {
         guard let uid = aDecoder.decodeObject(forKey: "uid") as? String,
-            let name = aDecoder.decodeObject(forKey: "name") as? String,
+            let firstName = aDecoder.decodeObject(forKey: "firstName") as? String,
+            let lastName = aDecoder.decodeObject(forKey: "lastName") as? String,
             let username = aDecoder.decodeObject(forKey: "username") as? String
             else { return nil }
         
         self.uid = uid
-        self.name = name
+        self.firstName = firstName
+        self.lastName = lastName
         self.username = username
     }
     
@@ -77,7 +84,8 @@ class User : NSObject {
 extension User: NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(uid, forKey: "uid")
-        aCoder.encode(name, forKey: "name")
+        aCoder.encode(firstName, forKey: "firstName")
+        aCoder.encode(lastName, forKey: "lastName")
         aCoder.encode(username, forKey: "username")
     }
 }
