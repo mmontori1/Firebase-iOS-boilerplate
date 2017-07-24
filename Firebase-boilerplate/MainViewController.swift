@@ -7,17 +7,31 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MainViewController: UIViewController {
 
+    var authHandle: AuthStateDidChangeListenerHandle?
+    
     @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         label.text = "\(User.current.username) \(User.current.firstName) \(User.current.lastName)"
+        
+        authHandle = AuthService.authListener(viewController: self)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    deinit {
+        AuthService.removeAuthListener(authHandle: authHandle)
+    }
 
+    @IBAction func logOutClicked(_ sender: UIButton) {
+        AuthService.presentLogOut(viewController: self)
+    }
 }
