@@ -39,7 +39,7 @@ struct UserService {
         })
     }
     
-    static func deleteAccount(forUID uid: String, success: @escaping (Bool) -> Void) {
+    static func deleteUser(forUID uid: String, success: @escaping (Bool) -> Void) {
         let ref = Database.database().reference().child("users")
         let object = [uid : NSNull()]
         ref.updateChildValues(object) { (error, ref) -> Void in

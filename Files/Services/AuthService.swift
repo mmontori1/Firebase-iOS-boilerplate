@@ -58,7 +58,7 @@ struct AuthService {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let signOutAction = UIAlertAction(title: "Delete Account", style: .destructive) { _ in
-            deleteUser(user: user)
+            deleteAccount(user: user)
         }
         
         alertController.addAction(signOutAction)
@@ -69,8 +69,8 @@ struct AuthService {
         viewController.present(alertController, animated: true)
     }
     
-    static func deleteUser(user : FIRUser){
-        UserService.deleteAccount(forUID: User.current.uid, success: { (success) in
+    static func deleteAccount(user : FIRUser){
+        UserService.deleteUser(forUID: User.current.uid, success: { (success) in
             if success {
                 logUserOut()
                 user.delete { error in
