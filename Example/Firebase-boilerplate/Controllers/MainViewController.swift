@@ -19,8 +19,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = "Name: \(User.current.firstName) \(User.current.lastName)"
-        usernameLabel.text = "Username: \(User.current.username)"
+        nameLabel.text = "\(User.current.firstName) \(User.current.lastName)"
+        usernameLabel.text = User.current.username
         
         authHandle = AuthService.authListener(viewController: self)
     }

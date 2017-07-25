@@ -16,8 +16,11 @@ class CreateUserViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,5 +66,13 @@ class CreateUserViewController: UIViewController {
                 self.view.window?.makeKeyAndVisible()
             }
         }
+    }
+}
+
+extension CreateUserViewController{
+    func configureView(){
+        applyKeyboardPush()
+        applyKeyboardDismisser()
+        signUpButton.layer.cornerRadius = 10
     }
 }

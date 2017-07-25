@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		011133DB1F26EBE600F214BC /* ViewController+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011133DA1F26EBE600F214BC /* ViewController+Utility.swift */; };
 		015ED1051F26C2A90061B0D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 015ED1031F26C2A90061B0D0 /* GoogleService-Info.plist */; };
 		015ED1081F26C2B30061B0D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015ED1061F26C2B30061B0D0 /* Main.storyboard */; };
 		015ED1091F26C2B30061B0D0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 015ED1071F26C2B30061B0D0 /* Login.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		011133DA1F26EBE600F214BC /* ViewController+Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ViewController+Utility.swift"; path = "Extensions/ViewController+Utility.swift"; sourceTree = "<group>"; };
 		015ED1021F26C2A90061B0D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
 		015ED1031F26C2A90061B0D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Supporting/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		015ED1061F26C2B30061B0D0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Storyboards/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				015ED10C1F26C2C70061B0D0 /* Storyboard+Utility.swift */,
+				011133DA1F26EBE600F214BC /* ViewController+Utility.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				015ED10D1F26C2C70061B0D0 /* Storyboard+Utility.swift in Sources */,
 				015ED10B1F26C2BC0061B0D0 /* User.swift in Sources */,
 				01C257FB1F264D0A00A49D8E /* AppDelegate.swift in Sources */,
+				011133DB1F26EBE600F214BC /* ViewController+Utility.swift in Sources */,
 				015ED1121F26C2D10061B0D0 /* LoginViewController.swift in Sources */,
 				015ED1171F26C2DC0061B0D0 /* UserService.swift in Sources */,
 				015ED1111F26C2D10061B0D0 /* MainViewController.swift in Sources */,

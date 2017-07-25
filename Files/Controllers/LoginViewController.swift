@@ -11,9 +11,12 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var createAccountButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -23,6 +26,7 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             if identifier == "createUser" {
+                view.endEditing(true)
                 print("To Create User Screen!")
             }
         }
@@ -60,5 +64,14 @@ class LoginViewController: UIViewController {
     
     @IBAction func createAccountClicked(_ sender: UIButton) {
         performSegue(withIdentifier: "createUser", sender: self)
+    }
+}
+
+extension LoginViewController{
+    func configureView(){
+        applyKeyboardPush()
+        applyKeyboardDismisser()
+        logInButton.layer.cornerRadius = 10
+        createAccountButton.layer.cornerRadius = 10
     }
 }
