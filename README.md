@@ -36,6 +36,10 @@ Now you just want to add Firebase to your app. You can do this by setting the pr
 
 ![alt text](https://cdn.rawgit.com/MakeSchool-Tutorials/Makestagram-Swift-V3/e3d3d494c07f3e0ec8b1600257166d2d6b1a313e/P01-Intro-To-Firebase/assets/05_initial_project_overview.png)
 
+Make sure you then enable email login in the authentication tab on Firebase.
+
+![alt text](http://i.imgur.com/98Ign92.png)
+
 That's it! Now you can work off making your own iOS app using Firebase.
 
 ## Issues
