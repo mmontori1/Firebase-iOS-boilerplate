@@ -36,4 +36,13 @@ class MainViewController: UIViewController {
     @IBAction func logOutClicked(_ sender: UIButton) {
         AuthService.presentLogOut(viewController: self)
     }
+    
+    @IBAction func deleteAccountClicked(_ sender: UIButton) {
+        guard let user = Auth.auth().currentUser else {
+            print("NO USER EXISTS???")
+            return
+        }
+        AuthService.presentDelete(viewController: self, user : user)
+    }
+    
 }

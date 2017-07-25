@@ -55,17 +55,33 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n44-sx-TR6">
-                                        <rect key="frame" x="87.5" y="467" width="107" height="40"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hoE-8i-l9H">
+                                        <rect key="frame" x="11" y="467" width="260" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n44-sx-TR6">
+                                                <rect key="frame" x="0.0" y="0.0" width="82" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="NNa-76-STc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <state key="normal" title="Log Out"/>
+                                                <connections>
+                                                    <action selector="logOutClicked:" destination="Ga0-TT-4BI" eventType="touchUpInside" id="XMJ-h0-ujb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxP-Mn-SsS">
+                                                <rect key="frame" x="102" y="0.0" width="158" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <state key="normal" title="Delete Account"/>
+                                                <connections>
+                                                    <action selector="deleteAccountClicked:" destination="Ga0-TT-4BI" eventType="touchUpInside" id="6Xj-gx-SNe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="NNa-76-STc"/>
+                                            <constraint firstItem="n44-sx-TR6" firstAttribute="height" secondItem="hoE-8i-l9H" secondAttribute="height" id="Tct-jM-Z5H"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Log Out"/>
-                                        <connections>
-                                            <action selector="logOutClicked:" destination="Ga0-TT-4BI" eventType="touchUpInside" id="XMJ-h0-ujb"/>
-                                        </connections>
-                                    </button>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="NOq-1z-2vY" firstAttribute="height" secondItem="qwu-dC-urs" secondAttribute="height" id="JjQ-Nr-By7"/>

@@ -49,7 +49,7 @@
                                                 <rect key="frame" x="0.0" y="35" width="303" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It7-iN-opx">
                                                 <rect key="frame" x="114.5" y="75" width="74" height="25"/>
@@ -65,7 +65,7 @@
                                                 <rect key="frame" x="0.0" y="110" width="303" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13f-zx-wmL">
                                                 <rect key="frame" x="130.5" y="150" width="42" height="30"/>
@@ -191,7 +191,7 @@
                                                 <rect key="frame" x="0.0" y="35.5" width="263" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WyT-il-BQ0">
                                                 <rect key="frame" x="77" y="80.5" width="109" height="30"/>
@@ -286,7 +286,7 @@
                                                         <rect key="frame" x="95" y="0.0" width="168" height="43.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -303,7 +303,7 @@
                                                         <rect key="frame" x="94" y="0.0" width="169" height="43.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -320,7 +320,7 @@
                                                         <rect key="frame" x="93.5" y="0.0" width="169.5" height="43"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -337,7 +337,7 @@
                                                         <rect key="frame" x="55.5" y="0.0" width="207.5" height="43.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -354,7 +354,7 @@
                                                         <rect key="frame" x="88.5" y="0.0" width="174.5" height="43.5"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>

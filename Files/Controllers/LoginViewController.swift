@@ -26,8 +26,12 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             if identifier == "createUser" {
-                view.endEditing(true)
+//                dismissKeyboard()
                 print("To Create User Screen!")
+            }
+            if identifier == "forgotPassword" {
+//                dismissKeyboard()
+                print("To Forget Password Screen!")
             }
         }
     }
@@ -37,11 +41,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginClicked(_ sender: UIButton) {
+        dismissKeyboard()
         guard let email = emailTextField.text,
             let password = passwordTextField.text else{
             return
         }
-        AuthService.signIn(email: email, password: password) { (user) in
+        AuthService.signIn(controller: self, email: email, password: password) { (user) in
             guard let user = user else {
                 print("error: FIRUser does not exist!")
                 return
@@ -63,7 +68,13 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func createAccountClicked(_ sender: UIButton) {
+        dismissKeyboard()
         performSegue(withIdentifier: "createUser", sender: self)
+    }
+    
+    @IBAction func forgotPasswordClicked(_ sender: UIButton) {
+        dismissKeyboard()
+        performSegue(withIdentifier: "forgotPassword", sender: self)
     }
 }
 

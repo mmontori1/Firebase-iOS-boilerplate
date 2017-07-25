@@ -26,11 +26,9 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let identifier = segue.identifier {
             if identifier == "createUser" {
-                dismissKeyboard()
                 print("To Create User Screen!")
             }
             if identifier == "forgotPassword" {
-                dismissKeyboard()
                 print("To Forget Password Screen!")
             }
         }
@@ -41,6 +39,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginClicked(_ sender: UIButton) {
+        dismissKeyboard()
         guard let email = emailTextField.text,
             let password = passwordTextField.text else{
             return
@@ -67,10 +66,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func createAccountClicked(_ sender: UIButton) {
+        dismissKeyboard()
         performSegue(withIdentifier: "createUser", sender: self)
     }
     
     @IBAction func forgotPasswordClicked(_ sender: UIButton) {
+        dismissKeyboard()
         performSegue(withIdentifier: "forgotPassword", sender: self)
     }
 }

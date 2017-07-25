@@ -49,7 +49,7 @@ class CreateUserViewController: UIViewController {
                 return
             }
         
-        AuthService.createUser(email: email, password: password) { (authUser) in
+        AuthService.createUser(controller: self, email: email, password: password) { (authUser) in
             guard let firUser = authUser else {
                 return
             }

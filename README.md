@@ -6,7 +6,8 @@ This boilerplate is to start off an iOS project with a simple setup with Firebas
 
 ### CocoaPod Setup
 
-After cloning/forking the repo, You have to first work on setting up all the files to the project and connecting it to Firebase. Copy over all the files in the Files folder and apply them to the project you've created.
+After cloning/forking the repo, You have to first work on setting up all the files to the project and connecting it to Firebase. Copy over all the files in the Files folder and apply them to a new XCode iOS project you've created. Make sure that the App Delegate and Main.storyboard replace the project's files that you created.
+
 You need to apply Firebase using CocoaPods by running this within the project directory on terminal:
 ```
 pod init
@@ -36,3 +37,10 @@ Now you just want to add Firebase to your app. You can do this by setting the pr
 ![alt text](https://cdn.rawgit.com/MakeSchool-Tutorials/Makestagram-Swift-V3/e3d3d494c07f3e0ec8b1600257166d2d6b1a313e/P01-Intro-To-Firebase/assets/05_initial_project_overview.png)
 
 That's it! Now you can work off making your own iOS app using Firebase.
+
+## Issues
+
+If there are any problems on the project, please go ahead an open up an issue on this repo.
+
+Thanks!
+

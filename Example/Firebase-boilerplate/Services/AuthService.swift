@@ -46,6 +46,44 @@ struct AuthService {
     
     /*
     ================= NOTE ====================
+    Allows you to delete an authenticated user.
+    Keep in mind you must also handle and 
+    delete any database/storage that the user 
+    uses. This only removes the user from 
+    Firebase's Authentication.
+    ===========================================
+    */
+    
+    static func presentDelete(viewController : UIViewController, user : FIRUser){
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let signOutAction = UIAlertAction(title: "Delete Account", style: .destructive) { _ in
+            deleteUser(user: user)
+        }
+        
+        alertController.addAction(signOutAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        viewController.present(alertController, animated: true)
+    }
+    
+    static func deleteUser(user : FIRUser){
+        UserService.deleteAccount(forUID: User.current.uid, success: { (success) in
+            if success {
+                logUserOut()
+                user.delete { error in
+                    if let error = error {
+                        print("DELETE ERROR \(error.localizedDescription)")
+                    }
+                }
+            }
+        })
+    }
+    
+    /*
+    ================= NOTE ====================
     This allows the user to return back to the
     login screen (storyboard) when the user has
     logged out.
@@ -86,12 +124,8 @@ struct AuthService {
     static func presentLogOut(viewController : UIViewController){
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        let signOutAction = UIAlertAction(title: "Are you sure you want to log out?", style: .destructive) { _ in
-            do {
-                try Auth.auth().signOut()
-            } catch let error as NSError {
-                assertionFailure("Error signing out: \(error.localizedDescription)")
-            }
+        let signOutAction = UIAlertAction(title: "Log Out", style: .destructive) { _ in
+            logUserOut()
         }
         
         alertController.addAction(signOutAction)
@@ -100,6 +134,14 @@ struct AuthService {
         alertController.addAction(cancelAction)
         
         viewController.present(alertController, animated: true)
+    }
+    
+    static func logUserOut(){
+        do {
+            try Auth.auth().signOut()
+        } catch let error as NSError {
+            assertionFailure("Error signing out: \(error.localizedDescription)")
+        }
     }
     
     private static func loginErrors(error : Error, controller : UIViewController){

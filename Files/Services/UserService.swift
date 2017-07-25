@@ -38,4 +38,17 @@ struct UserService {
             completion(user)
         })
     }
+    
+    static func deleteAccount(forUID uid: String, success: @escaping (Bool) -> Void) {
+        let ref = Database.database().reference().child("users")
+        let object = [uid : NSNull()]
+        ref.updateChildValues(object) { (error, ref) -> Void in
+            if let error = error {
+                print("error : \(error.localizedDescription)")
+                return success(false)
+            }
+            return success(true)
+        }
+        
+    }
 }
