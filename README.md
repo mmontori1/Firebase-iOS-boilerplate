@@ -1,5 +1,4 @@
-# Firebase-boilerplate
-iOS + Firebase boilerplate
+# Firebase iOS Boilerplate
 
 This boilerplate is to start off an iOS project with a simple setup with Firebase to create projects with simple authentication, database, and storage from Firebase. You can see it in action by running the Example project through X-code.
 
@@ -11,13 +10,25 @@ You need to apply Firebase using CocoaPods by running this within the project di
 pod init
 pod install
 ```
-Then add these lines to your Podfile in your project and pod install again.
+Then add these lines to your Podfile in your project.
 ```
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
 ```
+Run pod install again within the project directory on terminal.
+```
+pod install
+```
 From there, all you have to do is setup your Firebase online and connect the project from there.
 
 ## Applying Firebase to the project
+
+Go on Firebase using a Google account and start up a project. 
+![alt text](https://cdn.rawgit.com/MakeSchool-Tutorials/Makestagram-Swift-V3/e3d3d494c07f3e0ec8b1600257166d2d6b1a313e/P01-Intro-To-Firebase/assets/02_empty_firebase_console.png)
+
+Now you just want to add Firebase to your app. You can do this by setting the project to iOS. Follow the steps and only do the first two, which are to register the app and download the config file. You don't need to do add the Firebase SDK or add the initializer code since it is already set up. 
+![alt text](https://cdn.rawgit.com/MakeSchool-Tutorials/Makestagram-Swift-V3/e3d3d494c07f3e0ec8b1600257166d2d6b1a313e/P01-Intro-To-Firebase/assets/05_initial_project_overview.png)
+
+That's it! Now you can work off making your own iOS app using Firebase.
