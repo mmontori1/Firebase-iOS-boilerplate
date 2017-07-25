@@ -162,8 +162,6 @@ struct AuthService {
             let wrongPasswordAlert = UIAlertController(title: "No Account Found", message:
                 "We couldn't find an account that corresponds to that email. Do you want to create an account?", preferredStyle: UIAlertControllerStyle.alert)
             wrongPasswordAlert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.default,handler: nil))
-            wrongPasswordAlert.addAction(UIAlertAction(title: "Create Account", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
-            }))
             controller.present(wrongPasswordAlert, animated: true, completion: nil)
             break;
         default:
