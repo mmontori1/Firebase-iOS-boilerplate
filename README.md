@@ -1,6 +1,6 @@
 # Firebase iOS Boilerplate
 
-This boilerplate is to start off an iOS project with a simple setup with Firebase to create projects with simple authentication, database, and storage from Firebase. You can see it in action by running the Example project through X-code. Keep in mind, you need to install the CocoaPods for the Example project to work.
+This boilerplate is to start off an iOS project with a simple setup with Firebase to create projects with simple authentication, database, and storage from Firebase, as well as customize your own login user interface. You can see it in action by running the Example project through X-code. Keep in mind, you need to install the CocoaPods for the Example project to work.
 
 ## Setup
 
